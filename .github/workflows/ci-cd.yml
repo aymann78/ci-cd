@@ -27,3 +27,12 @@ jobs:
       - name: Desplegar en el servidor
         run: |
           ssh usuario@mi-servidor.com "docker pull mi-app && docker-compose up -d"
+          
+  rollback:
+    needs: deploy
+    runs-on: ubuntu-latest
+    if: failure()
+    steps:
+      - name: Revertir a la versión anterior
+        run: |
+          ssh usuario@mi-servidor.com "docker-compose down && docker-compose up -d imagen_anterior"
