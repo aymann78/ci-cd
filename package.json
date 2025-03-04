@@ -1,0 +1,26 @@
+{
+  "name": "ci-cd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "mocha tests/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aymann78/ci-cd.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aymann78/ci-cd/issues"
+  },
+  "homepage": "https://github.com/aymann78/ci-cd#readme",
+  "devDependencies": {
+    "mocha": "^11.1.0"
+  }
+}
