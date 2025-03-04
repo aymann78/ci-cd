@@ -1,0 +1,18 @@
+version: '3'
+services:
+  app:
+    image: mi-app
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: usuario_db
+      POSTGRES_PASSWORD: contrasena_db
+      POSTGRES_DB: miappdb
+    ports:
+      - "5432:5432"
